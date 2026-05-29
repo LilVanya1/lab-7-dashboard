@@ -1,0 +1,29 @@
+<mxfile host="Electron" version="29.6.1">
+  <diagram name="Страница-1" id="d1">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" background="#000000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a" value="&lt;div&gt;load_dataset&lt;/div&gt;&lt;div&gt;НАЧАЛО&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="0" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="p1" value="local = data.csv" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="60" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="c1" value="local существует?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="120" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="b1" value="source = local" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="20" y="180" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="b2" value="source = parent/data.csv" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="300" y="180" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="c2" value="source существует?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="240" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="err" value="Исключение FileNotFound" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="300" y="300" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="ret" value="ВОЗВРАТ read_csv(source)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="20" y="300" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="e" value="&lt;div&gt;КОНЕЦ&lt;/div&gt;&lt;div&gt;load_dataset&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="360" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="a" target="p1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="p1" target="c1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="c1" target="b1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="c1" target="b2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="b1" target="c2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="b2" target="c2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="c2" target="err"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="c2" target="ret"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="ret" target="e"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="err" target="e"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
