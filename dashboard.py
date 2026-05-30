@@ -205,7 +205,8 @@ def draw_bar() -> None:
     else:
         s = grouped.mean()
     sns.barplot(x=s.index.astype(str), y=s.values, ax=ax,
-                palette="viridis", errorbar=None)
+                hue=s.index.astype(str), palette="viridis",
+                legend=False, errorbar=None)
     ax.set_title(f"Калории по зонам пульса ({AGG_LABELS[agg_mode]})")
     ax.set_xlabel("Зона пульса")
     ax.set_ylabel("Калории")
